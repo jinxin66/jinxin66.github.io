@@ -2,9 +2,9 @@
   position: relative;
   overflow: hidden;
   border-radius: 4px;
-  margin: 1.6em 0;
+  margin: 1em 0;
   padding-top: 38px;
-  background: #21252B;
+  background: rgba(44, 44, 44, .7);
 }
 .article-content .highlight::-webkit-scrollbar {
   height: 10px;
@@ -24,7 +24,7 @@
   content: attr(data-rel);
   height: 38px;
   line-height: 38px;
-  color: #fff;
+  color: #eeeeee;
   font-size: 14px;
   position: absolute;
   top: 0;
@@ -48,7 +48,7 @@
   position: absolute;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  background: #FF5454;
+  background: #eeeeee;
   width: 12px;
   height: 12px;
   top: 0;
@@ -101,20 +101,19 @@
   padding-bottom: 53px !important;
 }
 .article-content .highlight {
-  padding: 15px 20px;
+  padding: 10px 15px;
 }
 .article-content pre,
 .article-content .highlight {
-  background: #282C34;
+  background: rgba(33, 33, 33, .7);
   overflow: auto;
-  color: #ABB2BF;
-  line-height: 22px;
+  color: #eeeeee;
 }
 
 .article-content .highlight .gutter pre,
 .article-content .gist .gist-file .gist-data .line-numbers {
-  color: #4B5363;
-  font-size: 0.85em;
+  color: #eeeeee;
+  font-size: 1em;
 }
 .article-content img {
   max-width: 100%;
@@ -125,7 +124,7 @@
 }
 .article-content code {
   background: #eee;
-  text-shadow: 0 1px #fff;
+  text-shadow: 0 1px #ffffff;
   padding: 0 0.3em;
 }
 .article-content pre code {
@@ -168,7 +167,7 @@
   padding-right: 20px;
 }
 .article-content .highlight .line {
-  height: 22.400000000000002px;
+  height: 22.5px;
 }
 .article-content .highlight .line.marked {
   background: #515151;

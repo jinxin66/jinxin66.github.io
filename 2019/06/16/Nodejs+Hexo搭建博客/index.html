@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>Nodejs+Hexo搭建博客 | 个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
+<meta name="keywords" content="教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nodejs+Hexo搭建博客">
+<meta property="og:url" content="http://jinxin66.github.io/2019/06/16/Nodejs+Hexo搭建博客/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906170148_00.webp">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906170148_01.gif">
+<meta property="og:image" content="http://jinxin66.github.io/images/pasted-0.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/pasted-1.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906170312_00.webp">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906170312_01.webp">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906170312_02.webp">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906170148_03.webp">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906170312_03.webp">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906170312_04.webp">
+<meta property="og:updated_time" content="2019-06-16T19:58:07.939Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nodejs+Hexo搭建博客">
+<meta name="twitter:description" content="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。">
+<meta name="twitter:image" content="http://jinxin66.github.io/images/201906170148_00.webp">
+  
+    <link rel="alternate" href="/" title="个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+
+  <!-- live2d -->
+  <div class="waifu">
+      <div class="waifu-tips"></div>
+      <canvas id="live2d" width="240" height="210" class="live2d"></canvas>
+  </div>
+  <link href="/lib/poster-girl/live2d.css" rel="stylesheet" type="text/css"> 
+  <script async src="/lib/poster-girl/jquery.min.js"></script>
+  <script async src="/lib/poster-girl/waifu-tips.js"></script>
+  <script async src="/lib/poster-girl/live2d.js"></script>
+  <script async type="text/javascript">
+      loadlive2d("live2d", "/lib/poster-girl/waifu-tips.json");
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" style="background-image: url(/images/bg5.jpg)" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+        <a class="nav-item" href="/" title>杂记</a>
+      
+        <a class="nav-item" href="/" title>随笔</a>
+      
+        <a class="nav-item" href="/" title>旅拍</a>
+      
+        <a class="nav-item" href="/" title>经验</a>
+      
+        <a class="nav-item" href="/about" title>关于</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-Nodejs+Hexo搭建博客" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Nodejs+Hexo搭建博客
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/06/16/Nodejs+Hexo搭建博客/" class="article-date">
+  <time datetime="2019-06-16T15:59:59.000Z" itemprop="datePublished">2019-06-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教程/">教程</a>►<a class="article-category-link" href="/categories/教程/搭建博客/">搭建博客</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-mac" itemprop="articleBody">
+      
+        <h3 id="Hexo-是一个快速、简洁且高效的博客框架。Hexo-使用-Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。"><a href="#Hexo-是一个快速、简洁且高效的博客框架。Hexo-使用-Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。" class="headerlink" title="Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。"></a>Hexo 是一个快速、简洁且高效的博客框架。<a href="https://hexo.io/">Hexo</a> 使用 <a href="https://daringfireball.net/projects/markdown/">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</h3><a id="more"></a>
+
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>以这篇文章来记录我这两天折腾hexo的过程和经历。</p>
+<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="注册登录-GitHub-并创建仓库"><a href="#注册登录-GitHub-并创建仓库" class="headerlink" title="注册登录 GitHub 并创建仓库"></a>注册登录 <a href="https://github.com/">GitHub</a> 并创建仓库</h4><p><img src="/images/201906170148_00.webp" alt="注册登录"><br>点击 GitHub 中的 New repository 创建新仓库，仓库名应该为：用户名 .github.io 。这里用户名使用你的 GitHub 帐号名称代替，这是固定写法。<br><img src="/images/201906170148_01.gif" alt="并创建仓库"></p>
+<h4 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 <a href="https://git-scm.com/downloads">Git</a></h4><p>安装好 Git 后,进行下面的配置。<br>在空白处右键 -&gt; Git Bash Here<br><img src="/images/pasted-0.png" alt="打开Git Bash Here"></p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"你的GitHub用户名"</span></span><br><span class="line">git config --global user.email <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure></div>
+
+<p>通过注册的邮箱生成 ssh 密钥文件：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"你的GitHub注册邮箱"</span></span><br></pre></td></tr></table></figure></div>
+
+<p>然后直接三个回车即可，默认不需要设置密码。最后得到了两个文件：id_rsa和id_rsa.pub。<br><img src="/images/pasted-1.png" alt="生成的密钥"><br>打开 id_rsa.pub 文件，将里面的内容全部复制。<br><img src="/images/201906170312_00.webp" alt="内容全部复制"><br>粘贴到GitHub SSH<br><img src="/images/201906170312_01.webp" alt="GitHub SSh"><br><img src="/images/201906170312_02.webp" alt="添加新的 SSH"></p>
+<h4 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 <a href="https://nodejs.org/en/">Node.js</a></h4><p>Hexo 基于 Node.js，因此需要先安装 Node.js，你可以在这里进行对应电脑版本的下载：<br><img src="/images/201906170148_03.webp" alt="Node.js下载"></p>
+<h3 id="Hexo-的安装"><a href="#Hexo-的安装" class="headerlink" title="Hexo 的安装"></a>Hexo 的安装</h3><p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。<br>所有必备的应用程序安装完成后，即可使用 npm 安装 Hexo。<br><br>新建一个文件夹（工作目录）在空白处右键 -&gt; Git Bash Here</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></div>
+
+<p>安装好 Hexo 后，马上就能使用了。首先初始化博客，输入：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo init MyBlog</span><br></pre></td></tr></table></figure></div>
+
+<p>接下来，进入文件夹 MyBlog,输入</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
+
+<p>然后，打开浏览器输入地址：<a href="localhost:4000">localhost:4000</a><br><img src="/images/201906170312_03.webp" alt="效果展示"></p>
+<p>使用 Hexo 生成静态文件快速而且简单。</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo g</span><br></pre></td></tr></table></figure></div>
+
+<p>启动服务预览文章</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo s</span><br></pre></td></tr></table></figure></div>
+
+<p>Hexo 提供了快速方便的一键部署功能，只需一条命令就能将网站部署到服务器上。</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure></div>
+
+<p>前提必须先在 _config.yml 中修改参数，一个正确的部署配置中至少要有 type 参数，例如：<br><img src="/images/201906170312_04.webp" alt="这一步的目的是将 Hexo 与 GitHub 进行关联"><br>到此个人博客算是搭建好了，但是一个爱折腾的人怎么会到此为止，下一篇会介绍一下我这两天折腾主题美化的过程。<br>Hexo 的其他教程详见 <a href="https://hexo.io/zh-cn/docs/">参考文档</a></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/16/我的第一篇文章/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">我的第一篇文章</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/avatar.jpg" title="图片来自网络">
+    <h3 class="avatar-name">
+      
+        开始结局
+      
+    </h3>
+    <p class="avatar-slogan">
+      从入门到放弃，新晋的咸鱼搬砖程序猿。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <style type="text/css" media="screen">.category-list-child{margin-left:1.5em;}</style>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Test/Test1/">Test1</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Test/Test1/Test2/">Test2</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Test/Test2/">Test2</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Test/Test2/Test3/">Test3</a></li></ul></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/教程/搭建博客/">搭建博客</a></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <canvas width="250" height="250" id="resCanvas" style="margin-left:-25px">
+        <a href="/tags/Test/" style="font-size: 10px;">Test</a> <a href="/tags/Test1/" style="font-size: 10px;">Test1</a> <a href="/tags/Test2/" style="font-size: 10px;">Test2</a> <a href="/tags/Test3/" style="font-size: 10px;">Test3</a> <a href="/tags/教程/" style="font-size: 10px;">教程</a>
+      </canvas>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/06/16/Nodejs+Hexo搭建博客/">Nodejs+Hexo搭建博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/16/我的第一篇文章/">我的第一篇文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/16/测试hexo-admin/">测试hexo-admin</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/16/测试hexo-blog-encrypt/">测试hexo-blog-encrypt</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/13/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/" title target="_blank">github</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 开始结局 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">敬告阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/" class="mobile-nav-link">杂记</a>
+  
+    <a href="/" class="mobile-nav-link">随笔</a>
+  
+    <a href="/" class="mobile-nav-link">旅拍</a>
+  
+    <a href="/" class="mobile-nav-link">经验</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":175,"height":250},"mobile":{"show":false},"react":{"opacity":0.9}});</script></body>
+</html>

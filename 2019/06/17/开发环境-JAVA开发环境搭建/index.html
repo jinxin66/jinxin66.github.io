@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>开发环境-JAVA开发环境搭建 | 个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="搭建博客博客的相关内容写完了，接下来写一些开发环境搭建的过程，按我学习这个专业以来的时间线逐一介绍。首先从JAVA开发环境开始吧，然后Web开发，数据库，C/C++,Android,Python等等。后面想到了在加。">
+<meta name="keywords" content="教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发环境-JAVA开发环境搭建">
+<meta property="og:url" content="http://jinxin66.github.io/2019/06/17/开发环境-JAVA开发环境搭建/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="搭建博客博客的相关内容写完了，接下来写一些开发环境搭建的过程，按我学习这个专业以来的时间线逐一介绍。首先从JAVA开发环境开始吧，然后Web开发，数据库，C/C++,Android,Python等等。后面想到了在加。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906171937_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172017_00.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172017_01.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172017_02.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172017_03.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172017_04.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172017_05.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172017_06.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172100_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172100_01.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172100_02.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172106_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172106_01.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172106_02.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172200_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172200_01.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172200_02.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172200_03.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172200_04.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_01.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_02.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_03.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_04.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_05.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_06.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_07.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_08.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906172215_09.jpg">
+<meta property="og:updated_time" content="2019-06-17T15:06:15.348Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="开发环境-JAVA开发环境搭建">
+<meta name="twitter:description" content="搭建博客博客的相关内容写完了，接下来写一些开发环境搭建的过程，按我学习这个专业以来的时间线逐一介绍。首先从JAVA开发环境开始吧，然后Web开发，数据库，C/C++,Android,Python等等。后面想到了在加。">
+<meta name="twitter:image" content="http://jinxin66.github.io/images/201906171937_00.png">
+  
+    <link rel="alternate" href="/" title="个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+
+  <!-- live2d -->
+  <div class="waifu">
+      <div class="waifu-tips"></div>
+      <canvas id="live2d" width="240" height="210" class="live2d"></canvas>
+  </div>
+  <link href="/lib/poster-girl/live2d.css" rel="stylesheet" type="text/css"> 
+  <script async src="/lib/poster-girl/jquery.min.js"></script>
+  <script async src="/lib/poster-girl/waifu-tips.js"></script>
+  <script async src="/lib/poster-girl/live2d.js"></script>
+  <script async type="text/javascript">
+      loadlive2d("live2d", "/lib/poster-girl/waifu-tips.json");
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" style="background-image: url(/images/bg5.jpg)" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+        <a class="nav-item" href="/" title>杂记</a>
+      
+        <a class="nav-item" href="/" title>随笔</a>
+      
+        <a class="nav-item" href="/" title>旅拍</a>
+      
+        <a class="nav-item" href="/" title>经验</a>
+      
+        <a class="nav-item" href="/about" title>关于</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-开发环境-JAVA开发环境搭建" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      开发环境-JAVA开发环境搭建
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/06/17/开发环境-JAVA开发环境搭建/" class="article-date">
+  <time datetime="2019-06-17T08:55:23.000Z" itemprop="datePublished">2019-06-17</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教程/">教程</a>►<a class="article-category-link" href="/categories/教程/环境搭建/">环境搭建</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-mac" itemprop="articleBody">
+      
+        <p>搭建博客博客的相关内容写完了，接下来写一些开发环境搭建的过程，按我学习这个专业以来的时间线逐一介绍。首先从JAVA开发环境开始吧，然后Web开发，数据库，C/C++,Android,Python等等。后面想到了在加。</p>
+<a id="more"></a>
+
+<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>我们都知道，一个程序的运行离不开相关运行环境的支撑，Java也不例外，今天就带领大家配置一下Java的基础环境，并且安装配置基本的集成开发环境。</p>
+<h2 id="编译运行环境"><a href="#编译运行环境" class="headerlink" title="编译运行环境"></a>编译运行环境</h2><p>Java语言的编译和运行需要JDK的支撑。而所谓的JDK就是Java开发工具包，今天我们就一起来安装一下JDK。</p>
+<h4 id="首先，进入官网下载相关的软件："><a href="#首先，进入官网下载相关的软件：" class="headerlink" title="首先，进入官网下载相关的软件："></a>首先，进入<a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">官网下载</a>相关的软件：</h4><p>目前JDK版本已经到了12.0了吗，这里不建议下载最新版，因为很多三方包不一定兼容，可以考虑使用前一到两的版本，我那时候装的是JDK8到现在也没换。刚刚去看了一下午jdk个版本的新特性，感觉还是有必要花点时间学习一下，可能会写一些jdk7到jdk12的新特性学习感悟。<br><img src="/images/201906171937_00.png" alt="下载"></p>
+<h4 id="点击进行安装，相关的步骤如下面的图片："><a href="#点击进行安装，相关的步骤如下面的图片：" class="headerlink" title="点击进行安装，相关的步骤如下面的图片："></a>点击进行安装，相关的步骤如下面的图片：</h4><p>除了换安装目录，其他的默认就好了<br>在这里面需要注意的是，我们下载安装的JDK其实是分为两个部分，即JDK和JRE，JDK在这里面是Java开发工具包，主要是用来编译Java程序。而JRE代表的是Java运行环境，主要作用的保证Java在编译完成之后可以正确运行。<br><img src="/images/201906172017_00.jpg" alt="更改JDK的安装路径"></p>
+<h4 id="第三步、配置环境变量。"><a href="#第三步、配置环境变量。" class="headerlink" title="第三步、配置环境变量。"></a>第三步、配置环境变量。</h4><p>JDK安装完成之后我们需要配置jdk的环境变量(一般安装过程中系统会自动添加环境变量，为了以防万一还是说一下)。我的系统是Windows10，就以这个系统为例进行演示（其它版本的Windows系统也是大同小异）。</p>
+<p>选中【我的电脑】右键选中【属性】，得到如下界面<br><img src="/images/201906172017_01.jpg" alt></p>
+<p>点击【高级系统设置】，点击【环境变量】<br><img src="/images/201906172017_02.jpg" alt><br><img src="/images/201906172017_03.jpg" alt></p>
+<p>在下方的系统变量中新建JAVA_HOME，填写jdk的安装路径，如下图：<br><img src="/images/201906172017_04.jpg" alt></p>
+<p>找到系统变量中的path，点击编辑，新增系统变量，变量值如下：<br><img src="/images/201906172017_05.jpg" alt><br>之后就直接点击【确定】就可以啦。在这里面需要注意的是：这里面的操作是在【系统变量】上进行，大家可不要将这些变量值设置到【用户变量】中，这是新手很容易犯的一个错误。</p>
+<h4 id="测试环境变量配置："><a href="#测试环境变量配置：" class="headerlink" title="测试环境变量配置："></a>测试环境变量配置：</h4><p>然后点击‘开始’——‘运行’，输入‘cmd’  或者 win+r 快捷键输入‘cmd’。在dos环境下输入：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="/images/201906172017_06.png" alt></p>
+<h2 id="集成开发环境"><a href="#集成开发环境" class="headerlink" title="集成开发环境"></a>集成开发环境</h2><p>集成开发环境简称为IDE 说白了就是开发软件 之前用过各种版本的Eclipse 、MyEclipse 直到最后开始用IDEA。下面就分别说一下MyEclipse2017和IDEA（推荐）的安装和激活。</p>
+<h4 id="MyEclipse2017"><a href="#MyEclipse2017" class="headerlink" title="MyEclipse2017"></a><a href="https://www.myeclipsecn.com">MyEclipse2017</a></h4><p>下面提供几个链接<br><a href="https://pan.baidu.com/s/1TWkwntF9i5lOys3Z96mpLQ">MyEclipse2017 CI7下载地址</a><br><a href="https://pan.baidu.com/s/1vxaHl7S9dIuD4O-lHOC0cA">MyEclipse2017 CI7破解包下载地址</a><br><a href="https://pan.baidu.com/s/1AvEkYAHTu0u-NjuKyY5b4Q">maven 3.5.2工具下载地址</a></p>
+<h4 id="安装MyEclipse2017-CI7"><a href="#安装MyEclipse2017-CI7" class="headerlink" title="安装MyEclipse2017 CI7"></a>安装MyEclipse2017 CI7</h4><p>过程简单不提。只是注意安装结束时Launch MyEclipse 2017 CI 的√一定要去掉才能点Finish 。在破解之前不要运行MyEclipse2017 CI7<br><img src="/images/201906172100_00.png" alt></p>
+<h4 id="破解MyEclipse2017-CI7"><a href="#破解MyEclipse2017-CI7" class="headerlink" title="破解MyEclipse2017 CI7"></a>破解MyEclipse2017 CI7</h4><p>解压MyEclipse2017 CI7破解包文件后得到 myeclipse2017keygen和patch两个文件夹<br><img src="/images/201906172100_01.png" alt><br>打开myeclipse2017keygen文件夹，点击crack.bat打开破解工具<br><img src="/images/201906172100_02.png" alt><br>破解步骤：<br>    1.输入Usercode（任意字母数字）<br>    2 选择下拉框中的Blue<br>    3 点击SystemId（第一次点击会出现如图的Cannot find JNIWrapper native library错误，没关系，再点一次就会生成SystemId了）<br>    4 点击Active按钮<br>    5 点击菜单栏 –&gt; Tools –&gt; 2.saveProperties<br>    保存成功后进行最后一步替换patch文件夹中的内容<br>    6 打开patch文件夹，复制里面的文件，先覆盖添加到MyEclipse2017安装目录下的 plugins文件夹内。<br>    <img src="/images/201906172106_00.png" alt><br>    7 操作结束，打开Myeclipse查看破解信息。</p>
+<p>打开Myeclipse，没有激活、试用等窗口出现<br><img src="/images/201906172106_01.png" alt><br>Help-&gt;Subscription Information菜单可查看激活状态<br><img src="/images/201906172106_02.png" alt></p>
+<h4 id="Myeclipse配置"><a href="#Myeclipse配置" class="headerlink" title="Myeclipse配置"></a>Myeclipse配置</h4><p> 1、代码自动提示功能<br>位置：window→Preferences→java→Editor→Content Assist<br>然后看到右边，右边的“Auto-Activation”下面的“Auto Activation triggers for java”这个选项<br>把值修改为：  .abcdefghijklmnopqrstuvwxyz<br><img src="/images/201906172200_00.png" alt></p>
+<p>2、取消Eclipse拼写检查<br>拼写检查会给我们带来不少的麻烦，我们的方法命名都会是单词的缩写，他也会提示有错，所以最好去掉，没有多大的用处<br>位置：windows–&gt;perferences–&gt;general–&gt;editors-&gt;Text Editors-&gt;spelling</p>
+<p>3、修改新建项目默认编码<br>位置：Window-&gt;Preferences-&gt;General-&gt;Workspace<br>将Text file encoding 修改为UTF-8</p>
+<p>4、JDK配置<br>Myeclipse配置本地JDK 1.8.0_114<br>位置:Window-&gt;Preferences-&gt;Java-&gt;Installed JREs<br>添加 Add… ，选择 Standard VM<br><img src="/images/201906172200_01.png" alt><br>选择Directory… 选择JDK的安装目录<br><img src="/images/201906172200_02.png" alt><br><img src="/images/201906172200_03.png" alt><br>勾选新增的JDK，OK<br><img src="/images/201906172200_04.png" alt></p>
+<p>到此就可以用MyEclipse2017 CI7 maven Tomcat等在Web开发环境配置再说。</p>
+<h4 id="IDEA"><a href="#IDEA" class="headerlink" title="IDEA"></a><a href="https://www.jetbrains.com/idea/">IDEA</a></h4><p>下载安装程序<br><img src="/images/201906172215_00.png" alt><br>下载之后双击,开始安装,点击next<br><img src="/images/201906172215_01.jpg" alt><br>选择安装路径<br><img src="/images/201906172215_02.jpg" alt><br>这里选择安装64位,点击next<br><img src="/images/201906172215_03.jpg" alt><br>之后就默认选择,点击install<br><img src="/images/201906172215_04.jpg" alt></p>
+<h4 id="激活IDEA"><a href="#激活IDEA" class="headerlink" title="激活IDEA"></a>激活IDEA</h4><p>首次启动<br><img src="/images/201906172215_05.jpg" alt><br>点击接受<br><img src="/images/201906172215_06.jpg" alt><br>激活注册（打开激活网站：<a href="https://jetlicense.nss.im/">https://jetlicense.nss.im/</a>）
+<img src="/images/201906172215_07.png" alt></p>
+<p>或选择Activation code，复制下方激活码到输入框</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="LSL"><figure class="iseeu highlight /lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">MTW881U3Z5-eyJsaWNlbnNlSWQiOiJNVFc4ODFVM1o1IiwibGljZW5zZWVOYW1lIjoiTnNzIEltIiwiYXNzaWduZWVOYW1lIjoiIiwiYXNzaWduZWVFbWFpbCI6IiIsImxpY2Vuc2VSZXN0cmljdGlvbiI6IkZvciBlZHVjYXRpb25hbCB1c2Ugb25seSIsImNoZWNrQ29uY3VycmVudFVzZSI6ZmFsc2UsInByb2R1Y3RzIjpbeyJjb2RlIjoiSUkiLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJBQyIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IkRQTiIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IlBTIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiR08iLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJETSIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IkNMIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiUlMwIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiUkMiLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJSRCIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IlBDIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiUk0iLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJXUyIsInBhaWRVcFRvIjoiMjAxOS0xMS0wNiJ9LHsiY29kZSI6IkRCIiwicGFpZFVwVG8iOiIyMDE5LTExLTA2In0seyJjb2RlIjoiREMiLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifSx7ImNvZGUiOiJSU1UiLCJwYWlkVXBUbyI6IjIwMTktMTEtMDYifV0sImhhc2giOiIxMDgyODE0Ni8wIiwiZ3JhY2VQZXJpb2REYXlzIjowLCJhdXRvUHJvbG9uZ2F0ZWQiOmZhbHNlLCJpc0F1dG9Qcm9sb25nYXRlZCI6ZmFsc2V9-aKyalfjUfiV5UXfhaMGgOqrMzTYy2rnsmobL47k8tTpR/jvG6HeL3FxxleetI+W+Anw3ZSe8QAMsSxqVS4podwlQgIe7f+<span class="number">3</span>w7zyAT1j8HMVlfl2h96KzygdGpDSbwTbwOkJ6/<span class="number">5</span>TQOPgAP86mkaSiM97KgvkZV/<span class="number">2</span>nXQHRz1yhm+MT+OsioTwxDhd/<span class="number">22</span>sSGq6KuIztZ03UvSciEmyrPdl2ueJw1WuT9YmFjdtTm9G7LuXvCM6eav+BgCRm+wwtUeDfoQqigbp0t6FQgkdQrcjoWvLSB0IUgp/f4qGf254fA7lXskT2VCFdDvi0jgxLyMVct1cKnPdM6fkHnbdSXKYDWw==-MIIElTCCAn2gAwIBAgIBCTANBgkqhkiG9w0BAQsFADAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBMB4XDTE4MTEwMTEyMjk0NloXDTIwMTEwMjEyMjk0NlowaDELMAkGA1UEBhMCQ1oxDjAMBgNVBAgMBU51c2xlMQ8wDQYDVQQHDAZQcmFndWUxGTAXBgNVBAoMEEpldEJyYWlucyBzLnIuby4xHTAbBgNVBAMMFHByb2QzeS1mcm9tLTIwMTgxMTAxMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxcQkq+zdxlR2mmRYBPzGbUNdMN6OaXiXzxIWtMEkrJMO/<span class="number">5</span>oUfQJbLLuMSMK0QHFmaI37WShyxZcfRCidwXjot4zmNBKnlyHodDij/<span class="number">78</span>TmVqFl8nOeD5+<span class="number">07</span>B8VEaIu7c3E1N+e1doC6wht4I4+IEmtsPAdoaj5WCQVQbrI8KeT8M9VcBIWX7fD0fhexfg3ZRt0xqwMcXGNp3DdJHiO0rCdU+Itv7EmtnSVq9jBG1usMSFvMowR25mju2JcPFp1+I4ZI+FqgR8gyG8oiNDyNEoAbsR3lOpI7grUYSvkB/xVy/VoklPCK2h0f0GJxFjnye8NT1PAywoyl7RmiAVRE/EKwIDAQABo4GZMIGWMAkGA1UdEwQCMAAwHQYDVR0OBBYEFGEpG9oZGcfLMGNBkY7SgHiMGgTcMEgGA1UdIwRBMD+AFKOetkhnQhI2Qb1t4Lm0oFKLl/GzoRykGjAYMRYwFAYDVQQDDA1KZXRQcm9maWxlIENBggkA0myxg7KDeeEwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0PBAQDAgWgMA0GCSqGSIb3DQEBCwUAA4ICAQAF8uc+YJOHHwOFcPzmbjcxNDuGoOUIP+<span class="number">2</span>h1R75Lecswb7ru2LWWSUMtXVKQzChLNPn/<span class="number">72</span>W0k+oI056tgiwuG7M49LXp4zQVlQnFmWU1wwGvVhq5R63Rpjx1zjGUhcXgayu7+<span class="number">9</span>zMUW596Lbomsg8qVve6euqsrFicYkIIuUu4zYPndJwfe0YkS5nY72SHnNdbPhEnN8wcB2Kz+OIG0lih3yz5EqFhld03bGp222ZQCIghCTVL6QBNadGsiN/lWLl4JdR3lJkZzlpFdiHijoVRdWeSWqM4y0t23c92HXKrgppoSV18XMxrWVdoSM3nuMHwxGhFyde05OdDtLpCv+jlWf5REAHHA201pAU6bJSZINyHDUTB+Beo28rRXSwSh3OUIvYwKNVeoBY+KwOJ7WnuTCUq1meE6GkKc4D/cXmgpOyW/<span class="number">1</span>SmBz3XjVIi/zprZ0zf3qH5mkphtg6ksjKgKjmx1cXfZAAX6wcDBNaCL+Ortep1Dh8xDUbqbBVNBL4jbiL3i3xsfNiyJgaZ5sX7i8tmStEpLbPwvHcByuf59qJhV/bZOl8KqJBETCDJcY6O2aqhTUy+<span class="number">9</span>x93ThKs1GKrRPePrWPluud7ttlgtRveit/pcBrnQcXOl1rHq7ByB8CFAxNotRUYL9IF5n3wJOgkPojMy6jetQA5Ogc8Sm7RG6vg1yow==</span><br></pre></td></tr></table></figure></div>
+
+<p>注意：如果上面网址失效，可以换这个试试，或者大家可以自行百度寻找新的激活服务（<a href="http://123.206.193.241:1017">http://123.206.193.241:1017</a>）
+<img src="/images/201906172215_08.png" alt><br>注册完成之后选择主题,点击下一步然后进行简单的参数设定。<br><img src="/images/201906172215_09.jpg" alt> </p>
+<h3 id="至此-JAVA开发环境基本完成如果经济允许还是支持一下正版吧"><a href="#至此-JAVA开发环境基本完成如果经济允许还是支持一下正版吧" class="headerlink" title="至此 JAVA开发环境基本完成如果经济允许还是支持一下正版吧"></a>至此 JAVA开发环境基本完成如果经济允许还是支持一下正版吧</h3>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/17/Hexo主题和插件/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Hexo主题和插件</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/avatar.jpg" title="图片来自网络">
+    <h3 class="avatar-name">
+      
+        开始结局
+      
+    </h3>
+    <p class="avatar-slogan">
+      从入门到放弃，新晋的咸鱼搬砖程序猿。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <style type="text/css" media="screen">.category-list-child{margin-left:1.5em;}</style>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/教程/搭建博客/">搭建博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/环境搭建/">环境搭建</a></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <canvas width="250" height="250" id="resCanvas" style="margin-left:-25px">
+        <a href="/tags/Test/" style="font-size: 10px;">Test</a> <a href="/tags/教程/" style="font-size: 20px;">教程</a>
+      </canvas>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/06/17/开发环境-JAVA开发环境搭建/">开发环境-JAVA开发环境搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/17/Hexo主题和插件/">Hexo主题和插件</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/16/Nodejs+Hexo搭建博客/">Nodejs+Hexo搭建博客</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/16/我的第一篇文章/">我的第一篇文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/16/测试hexo-admin/">测试hexo-admin</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/" title target="_blank">github</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 开始结局 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">敬告阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/" class="mobile-nav-link">杂记</a>
+  
+    <a href="/" class="mobile-nav-link">随笔</a>
+  
+    <a href="/" class="mobile-nav-link">旅拍</a>
+  
+    <a href="/" class="mobile-nav-link">经验</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":175,"height":250},"mobile":{"show":false},"react":{"opacity":0.9}});</script></body>
+</html>

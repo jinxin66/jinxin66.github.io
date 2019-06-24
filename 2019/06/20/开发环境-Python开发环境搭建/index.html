@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>开发环境-Python开发环境搭建 | 个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="在不同的操作系统中，Python存在细微的差别，因此有几点你需要牢记在心。这里将介绍大家使用的两个主要的Python版本，并简要介绍Python的安装步骤。">
+<meta name="keywords" content="教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发环境-Python开发环境搭建">
+<meta property="og:url" content="http://jinxin66.github.io/2019/06/20/开发环境-Python开发环境搭建/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="在不同的操作系统中，Python存在细微的差别，因此有几点你需要牢记在心。这里将介绍大家使用的两个主要的Python版本，并简要介绍Python的安装步骤。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201700_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201700_01.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201700_02.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201800_00.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201800_01.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201800_02.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201800_03.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201800_04.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201801_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201801_01.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201802_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201802_01.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201803_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/01906201804_00.png">
+<meta property="og:updated_time" content="2019-06-20T10:38:05.841Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="开发环境-Python开发环境搭建">
+<meta name="twitter:description" content="在不同的操作系统中，Python存在细微的差别，因此有几点你需要牢记在心。这里将介绍大家使用的两个主要的Python版本，并简要介绍Python的安装步骤。">
+<meta name="twitter:image" content="http://jinxin66.github.io/images/201906201700_00.png">
+  
+    <link rel="alternate" href="/" title="个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+
+  <!-- live2d -->
+  <div class="waifu">
+      <div class="waifu-tips"></div>
+      <canvas id="live2d" width="240" height="210" class="live2d"></canvas>
+  </div>
+  <link href="/lib/poster-girl/live2d.css" rel="stylesheet" type="text/css"> 
+  <script async src="/lib/poster-girl/jquery.min.js"></script>
+  <script async src="/lib/poster-girl/waifu-tips.js"></script>
+  <script async src="/lib/poster-girl/live2d.js"></script>
+  <script async type="text/javascript">
+      loadlive2d("live2d", "/lib/poster-girl/waifu-tips.json");
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" style="background-image: url(/images/bg5.jpg)" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+        <a class="nav-item" href="/categories/杂记" title>杂记</a>
+      
+        <a class="nav-item" href="/categories/随笔" title>随笔</a>
+      
+        <a class="nav-item" href="/categories/旅游" title>旅拍</a>
+      
+        <a class="nav-item" href="/categories/经验" title>经验</a>
+      
+        <a class="nav-item" href="/about" title>关于</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-开发环境-Python开发环境搭建" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      开发环境-Python开发环境搭建
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/06/20/开发环境-Python开发环境搭建/" class="article-date">
+  <time datetime="2019-06-19T16:58:04.000Z" itemprop="datePublished">2019-06-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教程/">教程</a>►<a class="article-category-link" href="/categories/教程/环境搭建/">环境搭建</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-mac" itemprop="articleBody">
+      
+        <p>在不同的操作系统中，Python存在细微的差别，因此有几点你需要牢记在心。这里将介绍大家使用的两个主要的Python版本，并简要介绍Python的安装步骤。</p>
+<a id="more"></a>
+
+<h4 id="Python-2和Python-3"><a href="#Python-2和Python-3" class="headerlink" title="Python 2和Python 3"></a>Python 2和Python 3</h4><p>当前，有两个不同的Python版本：Python 2和较新的Python 3。每种编程语言都会随着新概念和新技术的推出而不断发展，Python的开发者也一直致力于丰富和强化其功能。大多数修改都是逐步进行的，你几乎意识不到，但如果你的系统安装的是Python 3，那么有些使用Python 2编写的代码可能无法正确地运行。在我的电脑上就同时配置了双环境。</p>
+<h4 id="在Windows系统中搭建Python编程环境"><a href="#在Windows系统中搭建Python编程环境" class="headerlink" title="在Windows系统中搭建Python编程环境"></a>在Windows系统中搭建Python编程环境</h4><p>Windows系统并非都默认安装了Python，因此你可能需要下载并安装它，再下载并安装一个文本编辑器。</p>
+<h5 id="安装Python"><a href="#安装Python" class="headerlink" title="安装Python"></a>安装Python</h5><p>1、检查一下自己的系统是否安装有Python，毕竟不是每一台windows系统都装这种语言，打开我们的命令窗口。</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="/images/201906201700_00.png" alt> </p>
+<p>2、下载python<br><a href="https://www.python.org/downloads/release/python-2716/">python2</a><br><a href="https://www.python.org/downloads/release/python-373/">python3</a><br><img src="/images/201906201700_01.png" alt> </p>
+<p>3、下载完成之后打开进行安装，安装的时候选择复选框能够更轻松的配置环境，但是这里要配置双环境所以建议不要钩（如果是就装一个那建议钩）。<br><img src="/images/201906201700_02.png" alt> </p>
+<p>4、双环境环境变量配置<br>1.右键“我的电脑”选择“属性”<br><img src="/images/201906201800_00.jpg" alt><br>2.点击左侧“高级设置”<br><img src="/images/201906201800_01.jpg" alt><br>3.点击“环境变量”<br><img src="/images/201906201800_02.jpg" alt><br>4.在“系统变量”里选择“Path”编辑<br><img src="/images/201906201800_03.jpg" alt><br>5.点击右上方“新建”按钮，输入Python.exe文件所在目录,如下下图四条<br><img src="/images/201906201800_04.jpg" alt><br>6、进入Python.exe文件所在目录，将Python.exe和pip.exe分别改为Python2.exe、Python3.exe和pip2.exe、pip3.exe<br><img src="/images/201906201801_00.png" alt><br><img src="/images/201906201801_01.png" alt><br><img src="/images/201906201802_00.png" alt><br><img src="/images/201906201802_01.png" alt><br>7、测试双环境</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="CMD"><figure class="iseeu highlight /cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cmd</span>输入下面测试python2环境</span><br><span class="line">python2</span><br><span class="line">pip2</span><br><span class="line"></span><br><span class="line"><span class="built_in">cmd</span>输入下面测试python3环境</span><br><span class="line">python3</span><br><span class="line">pip3</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="/images/201906201803_00.png" alt></p>
+<h4 id="PyCarm-下载安装"><a href="#PyCarm-下载安装" class="headerlink" title="PyCarm 下载安装"></a>PyCarm 下载安装</h4><p>python环境搭好了，我们还需要一款好用的编码软件、之前提到的IDEA MyEclipse也可以但不适合、这里推荐两个</p>
+<h4 id="1、之前有提Subline-Text"><a href="#1、之前有提Subline-Text" class="headerlink" title="1、之前有提Subline Text"></a>1、之前有提Subline Text</h4><h4 id="2、PyCarm（推荐）"><a href="#2、PyCarm（推荐）" class="headerlink" title="2、PyCarm（推荐）"></a>2、PyCarm（推荐）</h4><p>PyCharm 的下载地址：<a href="http://www.jetbrains.com/pycharm/download/#section=windows">http://www.jetbrains.com/pycharm/download/#section=windows</a><br><img src="/images/01906201804_00.png" alt><br>professional 表示专业版，community 是社区版，推荐安装社区版，因为是免费使用的。<br>professional版激活和IDEA近乎一致不再介绍</p>
+<h2 id="总结一下吧"><a href="#总结一下吧" class="headerlink" title="总结一下吧"></a>总结一下吧</h2><h4 id="环境搭建很简单，值得注意的是-python2-和-pythom3-的区别和不兼容"><a href="#环境搭建很简单，值得注意的是-python2-和-pythom3-的区别和不兼容" class="headerlink" title="环境搭建很简单，值得注意的是 python2 和 pythom3 的区别和不兼容"></a>环境搭建很简单，值得注意的是 python2 和 pythom3 的区别和不兼容</h4><h4 id="个人对python-开发了解的并不多，只是写过一些坦克大战类的小游戏（以后简单说一下过程），爬取过股票数据并进行了股票数据分析（都是简单的调用三方库函数）"><a href="#个人对python-开发了解的并不多，只是写过一些坦克大战类的小游戏（以后简单说一下过程），爬取过股票数据并进行了股票数据分析（都是简单的调用三方库函数）" class="headerlink" title="个人对python 开发了解的并不多，只是写过一些坦克大战类的小游戏（以后简单说一下过程），爬取过股票数据并进行了股票数据分析（都是简单的调用三方库函数）"></a>个人对python 开发了解的并不多，只是写过一些坦克大战类的小游戏（以后简单说一下过程），爬取过股票数据并进行了股票数据分析（都是简单的调用三方库函数）</h4><h4 id="有必要的话是往深处学习一下"><a href="#有必要的话是往深处学习一下" class="headerlink" title="有必要的话是往深处学习一下"></a>有必要的话是往深处学习一下</h4>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/20/开发环境-PHP开发环境搭建/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            开发环境-PHP开发环境搭建
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/20/开发环境-Android开发环境搭建/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">开发环境-Android开发环境搭建</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/avatar.jpg" title="图片来自网络">
+    <h3 class="avatar-name">
+      
+        开始结局
+      
+    </h3>
+    <p class="avatar-slogan">
+      从入门到放弃，新晋的咸鱼搬砖程序猿。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <style type="text/css" media="screen">.category-list-child{margin-left:1.5em;}</style>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/教程/搭建博客/">搭建博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/环境搭建/">环境搭建</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/经验/">经验</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/经验/面试/">面试</a></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <canvas width="250" height="250" id="resCanvas" style="margin-left:-25px">
+        <a href="/tags/Test/" style="font-size: 10px;">Test</a> <a href="/tags/教程/" style="font-size: 20px;">教程</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+      </canvas>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2099/04/01/我的第一篇文章/">我的第一篇文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/21/Level-1-Part-2-Experience-2/">Level_1 Part_2 Experience+2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-数据库搭建/">开发环境-数据库搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-测试环境搭建/">开发环境-测试环境搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-C-C-开发环境搭建/">开发环境-C/C++开发环境搭建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/" title target="_blank">github</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 开始结局 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">敬告阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/categories/杂记" class="mobile-nav-link">杂记</a>
+  
+    <a href="/categories/随笔" class="mobile-nav-link">随笔</a>
+  
+    <a href="/categories/旅游" class="mobile-nav-link">旅拍</a>
+  
+    <a href="/categories/经验" class="mobile-nav-link">经验</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":175,"height":250},"mobile":{"show":false},"react":{"opacity":0.9}});</script></body>
+</html>

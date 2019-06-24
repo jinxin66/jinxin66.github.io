@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>开发环境-Android开发环境搭建 | 个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="Android的更新速度比较快了，Android1.0是2008年发布的，截止到目前为止Android已经更新Android9.0，学习Android开发的第一步就是搭建Android的开发环境，这里用的编译器是Android Studio ,你也可以用Myexplise 或者IDEA 这两个之前说过了不再介绍。　本教程将分为三个步骤来完成Android开发环境的部署。">
+<meta name="keywords" content="教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发环境-Android开发环境搭建">
+<meta property="og:url" content="http://jinxin66.github.io/2019/06/20/开发环境-Android开发环境搭建/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="Android的更新速度比较快了，Android1.0是2008年发布的，截止到目前为止Android已经更新Android9.0，学习Android开发的第一步就是搭建Android的开发环境，这里用的编译器是Android Studio ,你也可以用Myexplise 或者IDEA 这两个之前说过了不再介绍。　本教程将分为三个步骤来完成Android开发环境的部署。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201500_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201500_01.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201500_02.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201500_03.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201500_02.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201500_04.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906201500_05.png">
+<meta property="og:updated_time" content="2019-06-20T07:17:56.386Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="开发环境-Android开发环境搭建">
+<meta name="twitter:description" content="Android的更新速度比较快了，Android1.0是2008年发布的，截止到目前为止Android已经更新Android9.0，学习Android开发的第一步就是搭建Android的开发环境，这里用的编译器是Android Studio ,你也可以用Myexplise 或者IDEA 这两个之前说过了不再介绍。　本教程将分为三个步骤来完成Android开发环境的部署。">
+<meta name="twitter:image" content="http://jinxin66.github.io/images/201906201500_00.png">
+  
+    <link rel="alternate" href="/" title="个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+
+  <!-- live2d -->
+  <div class="waifu">
+      <div class="waifu-tips"></div>
+      <canvas id="live2d" width="240" height="210" class="live2d"></canvas>
+  </div>
+  <link href="/lib/poster-girl/live2d.css" rel="stylesheet" type="text/css"> 
+  <script async src="/lib/poster-girl/jquery.min.js"></script>
+  <script async src="/lib/poster-girl/waifu-tips.js"></script>
+  <script async src="/lib/poster-girl/live2d.js"></script>
+  <script async type="text/javascript">
+      loadlive2d("live2d", "/lib/poster-girl/waifu-tips.json");
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" style="background-image: url(/images/bg5.jpg)" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+        <a class="nav-item" href="/categories/杂记" title>杂记</a>
+      
+        <a class="nav-item" href="/categories/随笔" title>随笔</a>
+      
+        <a class="nav-item" href="/categories/旅游" title>旅拍</a>
+      
+        <a class="nav-item" href="/categories/经验" title>经验</a>
+      
+        <a class="nav-item" href="/about" title>关于</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-开发环境-Android开发环境搭建" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      开发环境-Android开发环境搭建
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/06/20/开发环境-Android开发环境搭建/" class="article-date">
+  <time datetime="2019-06-19T16:57:23.000Z" itemprop="datePublished">2019-06-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教程/">教程</a>►<a class="article-category-link" href="/categories/教程/环境搭建/">环境搭建</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-mac" itemprop="articleBody">
+      
+        <p>Android的更新速度比较快了，Android1.0是2008年发布的，截止到目前为止Android已经更新Android9.0，学习Android开发的第一步就是搭建Android的开发环境，这里用的编译器是Android Studio ,你也可以用Myexplise 或者IDEA 这两个之前说过了不再介绍。　本教程将分为三个步骤来完成Android开发环境的部署。</p>
+<a id="more"></a>
+
+<p><a href="#part_1">第一步：安装JDK</a><br><a href="#part_2">第二步：下载android studio</a><br><a href="#part_3">第三步： 下载android SDK TOOLS</a><br><a href="#part_4">第四步： 下载android SDK TOOLS</a><br><a href="#part_5">第五步：安装SDK</a><br><a href="#part_6">第六步：安装intel HAXM</a><br><a href="#part_7">第七步：创建AVD虚拟手机</a></p>
+<div id="part_1"></div>
+
+<h4 id="第一步：安装JDK"><a href="#第一步：安装JDK" class="headerlink" title="第一步：安装JDK"></a>第一步：安装JDK</h4><p>之前Java环境已经说过不做重复介绍：详见<a href="/2019/06/17/开发环境-JAVA开发环境搭建/">开发环境-JAVA开发环境搭建</a></p>
+<div id="part_2"></div>
+
+<h4 id="第二步：下载android-studio"><a href="#第二步：下载android-studio" class="headerlink" title="第二步：下载android studio"></a>第二步：下载android studio</h4><p>下载地址：<a href="http://www.android-studio.org/">http://www.android-studio.org/</a><br>下载解压后不要着急运行，因为这个android studio还只是一个空架子，啥也干不了。（其实就像是eclipse，一个代码编译器而已。只不过eclipse搭配不同组件啥都能干，android studio专门于android开发）</p>
+<div id="part_3"></div>
+
+<h4 id="第三步：下载android-SDK-TOOLS"><a href="#第三步：下载android-SDK-TOOLS" class="headerlink" title="第三步：下载android SDK TOOLS"></a>第三步：下载android SDK TOOLS</h4><p>下载地址：<a href="http://tools.android-studio.org/index.php/sdk">http://tools.android-studio.org/index.php/sdk</a><br>android SDK是用于模拟android运行环境的文件集合。android SDK TOOLS主要包括一个SDK管理器和一个AVD管理器。SDK管理器用来管理不同版本的SDK(每个版本SDK对应一个安卓版本)，AVD管理器用于创建一个虚拟手机。</p>
+<p>在前面下载地址中还包括了SDK和SDK System images的下载。这两样就不必下载了，因为SDK管理器可以替你下载更新，网速还可以。</p>
+<p>三者的包含关系：android SDK TOOLS{SDK1{System images,…},SDK2{System images,…}…}</p>
+<p>下载完毕后还需要配置环境变量：</p>
+<p>新建一个系统环境变量，变量名为ANDROID_SDK_HOME，变量值为你的SDK安装路径。然后就是在系统的Path变量后，追加 ;% ANDROID_SDK_HOME%\platform-tools;% ANDROID_SDK_HOME%\tools。然后可以检验一下Android SDK是否安装成功：在命令行窗口中输入”adb version“，如出现版本信息说明安装成功。</p>
+<div id="part_4"></div>
+
+<h4 id="第四步：配置android-studio"><a href="#第四步：配置android-studio" class="headerlink" title="第四步：配置android studio"></a>第四步：配置android studio</h4><p>在android studio/bin目录下的idea.properties文件未尾增加一行：disable.android.first.run=true（用记事本打开就行）<br>启动android studio并配置：<br><img src="/images/201906201500_00.png" alt><br>第一个是SDK TOOLS文件夹位置，第二个是JDK安装位置。<br><img src="/images/201906201500_01.png" alt></p>
+<div id="part_5"></div>
+
+<h4 id="第五步：安装SDK"><a href="#第五步：安装SDK" class="headerlink" title="第五步：安装SDK"></a>第五步：安装SDK</h4><p>从android studio中打开SDK管理器：<br><img src="/images/201906201500_02.png" alt><br>根据版本选择安装SDK ：<br><img src="/images/201906201500_03.png" alt></p>
+<div id="part_6"></div>
+
+<h4 id="第六步：安装intel-HAXM"><a href="#第六步：安装intel-HAXM" class="headerlink" title="第六步：安装intel HAXM"></a>第六步：安装intel HAXM</h4><p>intel HAXM是用于给安卓模拟器加速的，下载的android studio默认开启了该功能，如果你不安装，AVD会尝试去启动Hyper-V虚拟机，但该虚拟机仅能安装在64位windows上，我当前用的32位windows当然没有，于是AVD就报错返回了。<br>注：Hyper-V虚拟机是微软新技术，比HAXM更快的虚拟实现方式，而且可用于AMD CPU。<br>从android studio中打开SDK管理器：<br><img src="/images/201906201500_02.png" alt><br>选择 intel HAXM安装：<br><img src="/images/201906201500_04.png" alt></p>
+<div id="part_7"></div>
+
+<h4 id="第七步：创建AVD虚拟手机"><a href="#第七步：创建AVD虚拟手机" class="headerlink" title="第七步：创建AVD虚拟手机"></a>第七步：创建AVD虚拟手机</h4><p>从android studio中启动AVD管理器：<br><img src="/images/201906201500_05.png" alt><br>按提示一步步创建即可，需要注意的是：默认RAM是1024M，但运行虚拟机时会提示太大而报错，所以把RAM改为512M即可。</p>
+<h3 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h3><h4 id="其实我对android开发了解很少，如果有必要还是得深入了解一下。"><a href="#其实我对android开发了解很少，如果有必要还是得深入了解一下。" class="headerlink" title="其实我对android开发了解很少，如果有必要还是得深入了解一下。"></a>其实我对android开发了解很少，如果有必要还是得深入了解一下。</h4><h4 id="上面关于虚拟手机的过程其实可以用真实手机代替，或者用手机模拟器代替，比如雷电模拟器、MUMU模拟器、夜神模拟器等等。"><a href="#上面关于虚拟手机的过程其实可以用真实手机代替，或者用手机模拟器代替，比如雷电模拟器、MUMU模拟器、夜神模拟器等等。" class="headerlink" title="上面关于虚拟手机的过程其实可以用真实手机代替，或者用手机模拟器代替，比如雷电模拟器、MUMU模拟器、夜神模拟器等等。"></a>上面关于虚拟手机的过程其实可以用真实手机代替，或者用手机模拟器代替，比如雷电模拟器、MUMU模拟器、夜神模拟器等等。</h4>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/20/开发环境-Python开发环境搭建/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            开发环境-Python开发环境搭建
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/19/开发环境-WEB开发环境搭建/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">开发环境-WEB开发环境搭建</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/avatar.jpg" title="图片来自网络">
+    <h3 class="avatar-name">
+      
+        开始结局
+      
+    </h3>
+    <p class="avatar-slogan">
+      从入门到放弃，新晋的咸鱼搬砖程序猿。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <style type="text/css" media="screen">.category-list-child{margin-left:1.5em;}</style>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/教程/搭建博客/">搭建博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/环境搭建/">环境搭建</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/经验/">经验</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/经验/面试/">面试</a></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <canvas width="250" height="250" id="resCanvas" style="margin-left:-25px">
+        <a href="/tags/Test/" style="font-size: 10px;">Test</a> <a href="/tags/教程/" style="font-size: 20px;">教程</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+      </canvas>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2099/04/01/我的第一篇文章/">我的第一篇文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/21/Level-1-Part-2-Experience-2/">Level_1 Part_2 Experience+2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-数据库搭建/">开发环境-数据库搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-测试环境搭建/">开发环境-测试环境搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-C-C-开发环境搭建/">开发环境-C/C++开发环境搭建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/" title target="_blank">github</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 开始结局 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">敬告阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/categories/杂记" class="mobile-nav-link">杂记</a>
+  
+    <a href="/categories/随笔" class="mobile-nav-link">随笔</a>
+  
+    <a href="/categories/旅游" class="mobile-nav-link">旅拍</a>
+  
+    <a href="/categories/经验" class="mobile-nav-link">经验</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":175,"height":250},"mobile":{"show":false},"react":{"opacity":0.9}});</script></body>
+</html>

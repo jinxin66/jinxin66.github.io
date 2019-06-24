@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>开发环境-WEB开发环境搭建 | 个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="搭建WEB开发环境搭建还真没什么好说的，前端html+css没有环境可言，拿个记事本都可以开发这里顶多说一下方便开发的软件，学习内容也不会在这说。而JAVA Web 的环境基于JAVA环境，这里再补充一个Tomcat的配置。然后介绍一些web框架好了。">
+<meta name="keywords" content="教程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="开发环境-WEB开发环境搭建">
+<meta property="og:url" content="http://jinxin66.github.io/2019/06/19/开发环境-WEB开发环境搭建/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="搭建WEB开发环境搭建还真没什么好说的，前端html+css没有环境可言，拿个记事本都可以开发这里顶多说一下方便开发的软件，学习内容也不会在这说。而JAVA Web 的环境基于JAVA环境，这里再补充一个Tomcat的配置。然后介绍一些web框架好了。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192344_00.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192344_01.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192344_02.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192359_00.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192359_02.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192359_03.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192359_04.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192359_05.jpg">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192359_06.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192359_07.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192359_08.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201906192359_09.png">
+<meta property="og:updated_time" content="2019-06-19T16:51:40.436Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="开发环境-WEB开发环境搭建">
+<meta name="twitter:description" content="搭建WEB开发环境搭建还真没什么好说的，前端html+css没有环境可言，拿个记事本都可以开发这里顶多说一下方便开发的软件，学习内容也不会在这说。而JAVA Web 的环境基于JAVA环境，这里再补充一个Tomcat的配置。然后介绍一些web框架好了。">
+<meta name="twitter:image" content="http://jinxin66.github.io/images/201906192344_00.png">
+  
+    <link rel="alternate" href="/" title="个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+
+  <!-- live2d -->
+  <div class="waifu">
+      <div class="waifu-tips"></div>
+      <canvas id="live2d" width="240" height="210" class="live2d"></canvas>
+  </div>
+  <link href="/lib/poster-girl/live2d.css" rel="stylesheet" type="text/css"> 
+  <script async src="/lib/poster-girl/jquery.min.js"></script>
+  <script async src="/lib/poster-girl/waifu-tips.js"></script>
+  <script async src="/lib/poster-girl/live2d.js"></script>
+  <script async type="text/javascript">
+      loadlive2d("live2d", "/lib/poster-girl/waifu-tips.json");
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" style="background-image: url(/images/bg5.jpg)" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+        <a class="nav-item" href="/categories/杂记" title>杂记</a>
+      
+        <a class="nav-item" href="/categories/随笔" title>随笔</a>
+      
+        <a class="nav-item" href="/categories/旅游" title>旅拍</a>
+      
+        <a class="nav-item" href="/categories/经验" title>经验</a>
+      
+        <a class="nav-item" href="/about" title>关于</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-开发环境-WEB开发环境搭建" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      开发环境-WEB开发环境搭建
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/06/19/开发环境-WEB开发环境搭建/" class="article-date">
+  <time datetime="2019-06-19T14:43:24.000Z" itemprop="datePublished">2019-06-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/教程/">教程</a>►<a class="article-category-link" href="/categories/教程/环境搭建/">环境搭建</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/教程/">教程</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-mac" itemprop="articleBody">
+      
+        <p>搭建WEB开发环境搭建还真没什么好说的，前端html+css没有环境可言，拿个记事本都可以开发这里顶多说一下方便开发的软件，学习内容也不会在这说。而JAVA Web 的环境基于JAVA环境，这里再补充一个Tomcat的配置。然后介绍一些web框架好了。</p>
+<a id="more"></a>
+
+<h2 id="方便开发的软件"><a href="#方便开发的软件" class="headerlink" title="方便开发的软件"></a>方便开发的软件</h2><p>主流的web前端开发写代码的软件有这些Webstorm、Vscode、Sublime Text、HBuilder、Dreamweaver、notepad++、editplus等。下面说一下我用过的。</p>
+<h4 id="1-Sublime-Text【推荐】"><a href="#1-Sublime-Text【推荐】" class="headerlink" title="1.Sublime Text【推荐】"></a>1.Sublime Text【推荐】</h4><p>Sublime Text是一个代码编辑器也是HTML和散文先进的文本编辑器。漂亮的用户界面和非凡的功能，例如迷你地图，多选择，Python的插件，代码段，等等。完全可自定义键绑定，菜单和工具栏。Sublime Text的主要功能包括：拼写检查，书签，完整的Python API，Goto功能，即时项目切换，多选择，多窗口等等。</p>
+<p>使用感受：轻量插件多，安装复杂，需要翻墙，刚开始学前端时用了一段时间我就弃用了，对于前端新手，不推荐使用。</p>
+<h4 id="2-HBuilder【还可以】"><a href="#2-HBuilder【还可以】" class="headerlink" title="2.HBuilder【还可以】"></a>2.HBuilder【还可以】</h4><p>HBuilder是专为前端打造的开发工具，具有飞一样的编码、最全的语法库和浏览器兼容数据、可以方便的制作手机APP、最保护眼睛的绿柔设计等特点。支持HTML、CSS、JS、PHP的快速开发。</p>
+<p>使用感受：用了几次还不错，没怎么用，使用率不高，因为我习惯了Sublime</p>
+<h4 id="3-Dreamweaver"><a href="#3-Dreamweaver" class="headerlink" title="3.Dreamweaver"></a>3.Dreamweaver</h4><p>Dreamweaver是个由Macromedia公司所开发的著名网站开发工具。它使用所见即所得的接口，亦有HTML编辑的功能。</p>
+<p>使用感受：很老了，个人感觉过时了，不推荐使用，而且可以拖拽无脑编程。</p>
+<h4 id="4-notepad"><a href="#4-notepad" class="headerlink" title="4.notepad++"></a>4.notepad++</h4><p>软件小巧高效，支持27种编程语言，通吃C,C++ ,Java ,C#, XML, HTML, PHP,JS 等，Notepad++ 内置支持多达27种语法高亮度显示。是一款小巧而功能强大的软件。</p>
+<p>使用感受：没怎么用，谈不了感受。</p>
+<h4 id="特别注意：以上7个web前端开发写代码软件使用感觉，仅我个人使用感受。仅供参考下，根据你的使用习惯来选择吧。"><a href="#特别注意：以上7个web前端开发写代码软件使用感觉，仅我个人使用感受。仅供参考下，根据你的使用习惯来选择吧。" class="headerlink" title="特别注意：以上7个web前端开发写代码软件使用感觉，仅我个人使用感受。仅供参考下，根据你的使用习惯来选择吧。"></a>特别注意：以上7个web前端开发写代码软件使用感觉，仅我个人使用感受。仅供参考下，根据你的使用习惯来选择吧。</h4><h2 id="Tomcat的配置"><a href="#Tomcat的配置" class="headerlink" title="Tomcat的配置"></a>Tomcat的配置</h2><p>1、直接到官网下载<a href="http://tomcat.apache.org/">Tomcat安装程序包</a><br><img src="/images/201906192344_00.png" alt><br>2、下载下来后是个压缩包，如：apache-tomcat-7.0.40.zip，解压到一个非中文目录下即可完成安装。<br>3、更改配置、启动Tomcat（默认已经安装好java环境，如果未安装java会报错）</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1.在已解压的tomcat的bin文件夹下找到startup.bat，右击-&gt;编辑。在文件头加入下面两行：</span><br><span class="line">SET JAVA_HOME=D:\Java\jdk1.6.0_10 （java jdk目录）</span><br><span class="line">SET TOMCAT_HOME=E:\tomcat-6.0.35 （解压后的tomcat文件目录）</span><br><span class="line">2.同样的。在已解压的tomcat的bin文件夹下找到shutdown.bat，右击-&gt;编辑。在文件头加入下面两行：</span><br><span class="line">SET JAVA_HOME=D:\Java\jdk1.6.0_10 （java jdk目录）</span><br><span class="line">SET TOMCAT_HOME=E:\tomcat-6.0.35 （解压后的tomcat文件目录）</span><br><span class="line">3.将你要发布/部署的web文件复制到tomcat的webapps目录下。</span><br><span class="line">4.双击startup.bat即可启动tomcat，成功启动</span><br></pre></td></tr></table></figure></div>
+
+<p>4、将集成开发软件的内置tomcat换成你的tomcat(具体过程不说了)<br><a href="https://jingyan.baidu.com/article/09ea3ede48b425c0aede39d4.html">https://jingyan.baidu.com/article/09ea3ede48b425c0aede39d4.html</a><br><img src="/images/201906192344_01.png" alt="Myeclipse"><br><a href="https://jingyan.baidu.com/article/dca1fa6f0c34bcf1a4405232.html">https://jingyan.baidu.com/article/dca1fa6f0c34bcf1a4405232.html</a><br><img src="/images/201906192344_02.png" alt="IDEA"></p>
+<h2 id="web框架和前端工具"><a href="#web框架和前端工具" class="headerlink" title="web框架和前端工具"></a>web框架和前端工具</h2><p>这个很难说，随便百度就是什么三大框架、六大框架、十大框架的。这里就随便说说我知道的</p>
+<h4 id="1、jQuery"><a href="#1、jQuery" class="headerlink" title="1、jQuery"></a>1、<a href="http://jquery.com/">jQuery</a></h4><p><a href="https://www.runoob.com/jquery/jquery-tutorial.html">jQuery 教程 | 菜鸟教程</a><br><img src="/images/201906192359_00.jpg" alt></p>
+<h4 id="2、Bootstrap"><a href="#2、Bootstrap" class="headerlink" title="2、Bootstrap"></a>2、<a href="https://www.bootcss.com/">Bootstrap</a></h4><p><a href="https://www.runoob.com/bootstrap/bootstrap-tutorial.html">Bootstrap 教程 | 菜鸟教程</a><br><img src="/images/201906192359_02.jpg" alt></p>
+<h4 id="3、npm（节点包管理器）"><a href="#3、npm（节点包管理器）" class="headerlink" title="3、npm（节点包管理器）"></a>3、<a href="https://www.npmjs.cn/">npm（节点包管理器）</a></h4><p><a href="https://www.runoob.com/nodejs/nodejs-npm.html">NPM 使用介绍 | 菜鸟教程</a><br><img src="/images/201906192359_03.jpg" alt><br>它由三个不同的组件组成：<br>网站：该网站可用于发现软件包，设置配置文件并管理npm体验的其他方面。<br>命令行界面（CLI）：CLI从终端运行。开发人员可以通过CLI与npm进行交互。<br>注册表：注册表是JavaScript软件的大型公共数据库及其周围的元信息。它包含超过600,000个包（构建块代码）。</p>
+<h4 id="4、Angular"><a href="#4、Angular" class="headerlink" title="4、Angular"></a>4、<a href="https://www.angular.cn/">Angular</a></h4><p><a href="https://www.runoob.com/angularjs/angularjs-intro.html">AngularJS 简介 | 菜鸟教程</a><br><img src="/images/201906192359_04.jpg" alt><br>Angular是高度模块化的，因此非常适合与团队分开大型工作，并且使测试和调试变得轻松。它与AJAX以惊人的速度配对，并且可以通过表单处理大量的用户交互。功能优先的方法使Angular更加专注于功能，使开发人员的工作更轻松。此外，它还有来自Google社区的出色工具和支持。</p>
+<h4 id="5、WebPack"><a href="#5、WebPack" class="headerlink" title="5、WebPack"></a>5、<a href="https://www.webpackjs.com/">WebPack</a></h4><p><a href="https://www.runoob.com/w3cnote/webpack-tutorial.html">Webpack 入门教程 | 菜鸟教程</a><br><img src="/images/201906192359_05.jpg" alt><br>Webpack是现代JavaScript应用程序的模块打包程序。Webpack是一种已经存在多年的工具，但最近它的流行度不断增长。这就是开发商将它列入我们名单上第5位的原因。简单来说，Webpack将前端开发所需的所有资源（如JavaScript，字体和图像）集中到一个地方。如果您正在开发复杂的前端，这特别有用。</p>
+<h3 id="其他前端工具，其中包括开发人员的热门推荐："><a href="#其他前端工具，其中包括开发人员的热门推荐：" class="headerlink" title="其他前端工具，其中包括开发人员的热门推荐："></a>其他前端工具，其中包括开发人员的热门推荐：</h3><h4 id="1、Sass"><a href="#1、Sass" class="headerlink" title="1、Sass"></a>1、<a href="https://sass-lang.com/">Sass</a></h4><p><a href="http://sass.bootcss.com/docs/sass-reference/">Sass 中文文档</a><br><img src="/images/201906192359_06.png" alt><br>Sass是一个网页设计框架，一个CSS预处理器，它将诸如变量，嵌套规则和mixin等特殊功能添加到常规CSS中。</p>
+<h4 id="2、React"><a href="#2、React" class="headerlink" title="2、React"></a>2、<a href="https://react.docschina.org/">React</a></h4><p><a href="https://www.runoob.com/react/react-tutorial.html">React 教程 | 菜鸟教程</a><br><img src="/images/201906192359_07.png" alt><br>React是用于构建UI界面的最流行的JavaScript库之一。它为创建单页应用程序和移动应用程序提供了速度，简单性和可伸缩性。</p>
+<h4 id="3、Gulp"><a href="#3、Gulp" class="headerlink" title="3、Gulp"></a>3、<a href="https://www.gulpjs.com.cn/">Gulp</a></h4><p><a href="https://www.gulpjs.com.cn/docs/">gulp 中文文档</a><br><img src="/images/201906192359_08.png" alt><br>一个开源的JavaScript工具包，Gulp主要用于自动化任务，如捆绑和缩小库和样式表，快速运行单元测试，运行代码分析等。</p>
+<h4 id="4、Vue"><a href="#4、Vue" class="headerlink" title="4、Vue"></a>4、<a href="https://cn.vuejs.org/">Vue</a></h4><p><a href="https://www.runoob.com/vue2/vue-tutorial.html">Vue.js 教程 | 菜鸟教程</a><br><img src="/images/201906192359_09.png" alt><br>越来越多地采用，Vue是一个快速发展的JavaScript框架。在API集成和应用程序设计方面，它比Angular简单得多。它是一个表示层，而不是一个全面的框架。因此，您可以轻松地将Vue与其他库结合起来。</p>
+<h3 id="就这样吧，花点时间学一下vue和React"><a href="#就这样吧，花点时间学一下vue和React" class="headerlink" title="就这样吧，花点时间学一下vue和React"></a>就这样吧，花点时间学一下vue和React</h3>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/20/开发环境-Android开发环境搭建/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            开发环境-Android开发环境搭建
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/19/Level-1-Part-1-Experience-2/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Level_1 Part_1 Experience+2</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/avatar.jpg" title="图片来自网络">
+    <h3 class="avatar-name">
+      
+        开始结局
+      
+    </h3>
+    <p class="avatar-slogan">
+      从入门到放弃，新晋的咸鱼搬砖程序猿。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <style type="text/css" media="screen">.category-list-child{margin-left:1.5em;}</style>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/教程/搭建博客/">搭建博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/环境搭建/">环境搭建</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/经验/">经验</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/经验/面试/">面试</a></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <canvas width="250" height="250" id="resCanvas" style="margin-left:-25px">
+        <a href="/tags/Test/" style="font-size: 10px;">Test</a> <a href="/tags/教程/" style="font-size: 20px;">教程</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+      </canvas>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2099/04/01/我的第一篇文章/">我的第一篇文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/21/Level-1-Part-2-Experience-2/">Level_1 Part_2 Experience+2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-数据库搭建/">开发环境-数据库搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-测试环境搭建/">开发环境-测试环境搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-C-C-开发环境搭建/">开发环境-C/C++开发环境搭建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/" title target="_blank">github</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 开始结局 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">敬告阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/categories/杂记" class="mobile-nav-link">杂记</a>
+  
+    <a href="/categories/随笔" class="mobile-nav-link">随笔</a>
+  
+    <a href="/categories/旅游" class="mobile-nav-link">旅拍</a>
+  
+    <a href="/categories/经验" class="mobile-nav-link">经验</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":175,"height":250},"mobile":{"show":false},"react":{"opacity":0.9}});</script></body>
+</html>

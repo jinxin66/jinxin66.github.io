@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>测试hexo-blog-encrypt | 个人博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="仅个人可见">
+<meta name="keywords" content="Test">
+<meta property="og:type" content="article">
+<meta property="og:title" content="测试hexo-blog-encrypt">
+<meta property="og:url" content="http://jinxin66.github.io/2019/06/14/测试hexo-blog-encrypt/index.html">
+<meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="仅个人可见">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-06-20T05:36:42.701Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="测试hexo-blog-encrypt">
+<meta name="twitter:description" content="仅个人可见">
+  
+    <link rel="alternate" href="/" title="个人博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.webp">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+  <script>
+  let antiquityStorage = window.sessionStorage.getItem('antiquitySessionStorage');
+  if (antiquityStorage == '' || antiquityStorage == null) {
+    var antiquityLoader = '<div id="loaderbox"><div class="loader"><div class="load-roll"><div class="load-top"></div><div class="load-right"></div><div class="load-bottom"></div></div></div></div>';
+    document.write(antiquityLoader);
+    document.body.style.overflow = 'hidden'
+  }
+  </script>
+
+  <!-- live2d -->
+  <div class="waifu">
+      <div class="waifu-tips"></div>
+      <canvas id="live2d" width="240" height="210" class="live2d"></canvas>
+  </div>
+  <link href="/lib/poster-girl/live2d.css" rel="stylesheet" type="text/css"> 
+  <script async src="/lib/poster-girl/jquery.min.js"></script>
+  <script async src="/lib/poster-girl/waifu-tips.js"></script>
+  <script async src="/lib/poster-girl/live2d.js"></script>
+  <script async type="text/javascript">
+      loadlive2d("live2d", "/lib/poster-girl/waifu-tips.json");
+  </script>
+</head>
+</html>
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" style="background-image: url(/images/bg5.jpg)" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title>首页</a>
+      
+        <a class="nav-item" href="/archives" title>归档</a>
+      
+        <a class="nav-item" href="/categories/杂记" title>杂记</a>
+      
+        <a class="nav-item" href="/categories/随笔" title>随笔</a>
+      
+        <a class="nav-item" href="/categories/旅游" title>旅拍</a>
+      
+        <a class="nav-item" href="/categories/经验" title>经验</a>
+      
+        <a class="nav-item" href="/about" title>关于</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-测试hexo-blog-encrypt" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      测试hexo-blog-encrypt
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/06/14/测试hexo-blog-encrypt/" class="article-date">
+  <time datetime="2019-06-13T16:00:00.000Z" itemprop="datePublished">2019-06-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Test/">Test</a>
+  </div>
+
+    
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Test/">Test</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-mac" itemprop="articleBody">
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<div id="hbe-security">
+  <div class="hbe-input-container">
+  <input type="password" class="hbe-form-control" id="pass" placeholder="口令：天王盖地虎.">
+    <label for="pass">口令：天王盖地虎.</label>
+    <div class="bottom-line"></div>
+  </div>
+</div>
+<div id="decryptionError" style="display: none;">肯定不是 宝塔镇河妖!</div>
+<div id="noContentError" style="display: none;">No content to display!</div>
+<div id="encrypt-blog" style="display:none">
+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
+</div>
+<script src="/lib/crypto-js.js"></script><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/14/测试hexo-admin/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            测试hexo-admin
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/06/13/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">Hello World</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    
+<div id="gitmentContainer"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/avatar.jpg" title="图片来自网络">
+    <h3 class="avatar-name">
+      
+        开始结局
+      
+    </h3>
+    <p class="avatar-slogan">
+      从入门到放弃，新晋的咸鱼搬砖程序猿。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <style type="text/css" media="screen">.category-list-child{margin-left:1.5em;}</style>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Test/">Test</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/">教程</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/教程/搭建博客/">搭建博客</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/教程/环境搭建/">环境搭建</a></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/经验/">经验</a><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/经验/面试/">面试</a></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <script type="text/javascript" charset="utf-8" src="/js/tagcloud.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/tagcanvas.js"></script>
+  <div class="widget-box">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <canvas width="250" height="250" id="resCanvas" style="margin-left:-25px">
+        <a href="/tags/Test/" style="font-size: 10px;">Test</a> <a href="/tags/教程/" style="font-size: 20px;">教程</a> <a href="/tags/面试/" style="font-size: 10px;">面试</a>
+      </canvas>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2099/04/01/我的第一篇文章/">我的第一篇文章</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/21/Level-1-Part-2-Experience-2/">Level_1 Part_2 Experience+2</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-数据库搭建/">开发环境-数据库搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-测试环境搭建/">开发环境-测试环境搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/20/开发环境-C-C-开发环境搭建/">开发环境-C/C++开发环境搭建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://github.com/" title target="_blank">github</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 开始结局 &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">敬告阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/categories/杂记" class="mobile-nav-link">杂记</a>
+  
+    <a href="/categories/随笔" class="mobile-nav-link">随笔</a>
+  
+    <a href="/categories/旅游" class="mobile-nav-link">旅拍</a>
+  
+    <a href="/categories/经验" class="mobile-nav-link">经验</a>
+  
+    <a href="/about" class="mobile-nav-link">关于</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":175,"height":250},"mobile":{"show":false},"react":{"opacity":0.9}});</script></body>
+</html>

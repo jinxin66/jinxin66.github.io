@@ -10,15 +10,32 @@
   
   
   
-  <meta name="keywords" content="教程">
+  <meta name="description" content="数据库系统有很多，主流的有ORACLE（甲骨文）、DB2、SQL Server、Sybase、Informix、MySQL、VF、Access等。其实数据库系统几乎支持所有的操作系统，也就是上述数据库几乎与平台无关（当然除SQL Server和Access以外，因为这是微软的东西，平台依赖性很强的）。">
+<meta name="keywords" content="教程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="开发环境-数据库搭建">
 <meta property="og:url" content="http://jinxin66.github.io/2019/06/20/开发环境-数据库搭建/index.html">
 <meta property="og:site_name" content="个人博客">
+<meta property="og:description" content="数据库系统有很多，主流的有ORACLE（甲骨文）、DB2、SQL Server、Sybase、Informix、MySQL、VF、Access等。其实数据库系统几乎支持所有的操作系统，也就是上述数据库几乎与平台无关（当然除SQL Server和Access以外，因为这是微软的东西，平台依赖性很强的）。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-06-20T12:18:28.770Z">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_01.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_02.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_03.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_04.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_05.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_06.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_07.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_08.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_09.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_10.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_20.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_21.png">
+<meta property="og:image" content="http://jinxin66.github.io/images/201907251325_22.png">
+<meta property="og:updated_time" content="2019-07-25T06:44:16.514Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="开发环境-数据库搭建">
+<meta name="twitter:description" content="数据库系统有很多，主流的有ORACLE（甲骨文）、DB2、SQL Server、Sybase、Informix、MySQL、VF、Access等。其实数据库系统几乎支持所有的操作系统，也就是上述数据库几乎与平台无关（当然除SQL Server和Access以外，因为这是微软的东西，平台依赖性很强的）。">
+<meta name="twitter:image" content="http://jinxin66.github.io/images/201907251325_01.png">
   
     <link rel="alternate" href="/" title="个人博客" type="application/atom+xml">
   
@@ -117,7 +134,61 @@
     
     <div class="article-content article-content-mac" itemprop="articleBody">
       
-        
+        <p>数据库系统有很多，主流的有ORACLE（甲骨文）、DB2、SQL Server、Sybase、Informix、MySQL、VF、Access等。<br>其实数据库系统几乎支持所有的操作系统，也就是上述数据库几乎与平台无关（当然除SQL Server和Access以外，因为这是微软的东西，平台依赖性很强的）。</p>
+<a id="more"></a>
+
+<p>众多数据库系统中我所接触过的（仅使用）数据库系统只有ORACLE、SQL Server、MySQL、Mongodb。这里介绍ORACLE、MySQL的搭建。</p>
+<h3 id="Windows-MySQL的搭建"><a href="#Windows-MySQL的搭建" class="headerlink" title="Windows MySQL的搭建"></a>Windows MySQL的搭建</h3><p><a href="https://dev.mysql.com/downloads/windows/installer/8.0.html">https://dev.mysql.com/downloads/windows/installer/8.0.html</a><br><img src="/images/201907251325_01.png" alt></p>
+<p>双击下载安装包，得到如下界面，点击接受协议，下一步<br><img src="/images/201907251325_02.png" alt></p>
+<p>这里选择默认安装所有产品，当然也可以按照自己的需要选择安装，不过建议全部安装，点击下一步<br><img src="/images/201907251325_03.png" alt></p>
+<p>然后选择安装路径，默认安装到C盘，不建议，可以自己选择安装路径和数据存储目录，点击下一步<br><img src="/images/201907251325_04.png" alt></p>
+<p>这里是检查电脑配置是否符合安装要求，直接点击下一步，可能会有一个弹出框，直接点击yes进入下一步<br><img src="/images/201907251325_05.png" alt><br><img src="/images/201907251325_06.png" alt></p>
+<p>来到安装界面，点击execute执行安装，这个过程可能有点慢，需要逐个安装产品，完成之后，点击下一步<br><img src="/images/201907251325_07.png" alt></p>
+<p>产品确认，对你选择安装的所有产品展示，点击下一步即可<br><img src="/images/201907251325_08.png" alt></p>
+<p>跳转到MySQL Server8.0.11安装引导，一路下一步即可<br><img src="/images/201907251325_09.png" alt></p>
+<p>到这个页面让设置登录密码，一定要牢记密码，然后下一步<br><img src="/images/201907251325_10.png" alt></p>
+<p>到最后一步，点击Execute执行，等待所有产品检查安装完成，点击finish完成</p>
+<h3 id="Linux-Centos7-MySQL的搭建"><a href="#Linux-Centos7-MySQL的搭建" class="headerlink" title="Linux(Centos7) MySQL的搭建"></a>Linux(Centos7) MySQL的搭建</h3><p>之前也有在服务器上搭建环境这里简单说一下</p>
+<p>下载mysql源安装包</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://dev.mysql.com/get/mysql57-community-release-el7-8.noarch.rpm</span><br></pre></td></tr></table></figure></div>
+
+<p>安装mysql源</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum localinstall mysql57-community-release-el7-8.noarch.rpm</span><br></pre></td></tr></table></figure></div>
+
+<p>如果中间提示[Is this ok [y/d/N]: 输入y表示yes，继续安装</p>
+<p>验证安装源</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum repolist enabled | grep <span class="string">"mysql.*-community.*"</span></span><br></pre></td></tr></table></figure></div>
+
+<p><img src="/images/201907251325_20.png" alt></p>
+<p>安装mysql</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql-community-server</span><br></pre></td></tr></table></figure></div>
+
+<p>同样，中间有[Is this ok [y/d/N]:选择y</p>
+<h5 id="初始化MySQL"><a href="#初始化MySQL" class="headerlink" title="初始化MySQL"></a>初始化MySQL</h5><p>启动MySQL服务</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mysqld</span><br></pre></td></tr></table></figure></div>
+
+<p>没有任何提示，应该是没问题的，通过以下命令查看启动状态</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mysqld</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="/images/201907251325_21.png" alt><br>running…运行中，启动成功</p>
+<p>设置开机自启动（看个人需求，我没设置所以每次重启服务器都要记得开数据库服务）</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl <span class="built_in">enable</span> mysqld</span><br><span class="line">systemctl daemon-reload</span><br></pre></td></tr></table></figure></div>
+
+<p>mysql安装完成之后，在/var/log/mysqld.log文件中给root生成了一个默认密码。通过下面的方式找到root默认密码，然后登录mysql进行修改：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">'temporary password'</span> /var/<span class="built_in">log</span>/mysqld.log</span><br></pre></td></tr></table></figure></div>
+
+<p><img src="/images/201907251325_22.png" alt><br>很容易根据信息知道，我们安装的MySQL的root的临时密码是：Wd9cTX&gt;;QfzB我们就用它登录，然后修改密码：</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure></div>
+
+<p>输入临时密码，登录成功！</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'###你的密码(密码格式请看注意)###'</span>;</span><br></pre></td></tr></table></figure></div>
+
+<p>注意：mysql5.7默认安装了密码安全检查插件（validate_password），默认密码检查策略要求密码必须包含：大小写字母、数字和特殊符号，并且长度不能少于8位。否则会提示ERROR 1819 (HY000): Your password does not satisfy the current policy requirements错误<br>简而言之：你的密码必须包含以下5个要求：至少8位／大写／小写／特殊符号（@!～等）／数字</p>
+<p>设置root账号可远程访问</p>
+<div class="highlight-box" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true" data-rel="BASH"><figure class="iseeu highlight /bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; GRANT ALL ON *.* TO root@<span class="string">'%'</span> IDENTIFIED BY <span class="string">'###密码###'</span> WITH GRANT OPTION;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="然后你可以在本地安装数据库系统管理软件连接管理本地和服务器上的数据库"><a href="#然后你可以在本地安装数据库系统管理软件连接管理本地和服务器上的数据库" class="headerlink" title="然后你可以在本地安装数据库系统管理软件连接管理本地和服务器上的数据库"></a>然后你可以在本地安装数据库系统管理软件连接管理本地和服务器上的数据库</h3><p>这里推荐Navicat系列，<a href="https://www.navicat.com.cn/products/navicat-for-mysql">Navicat for Mysql</a> 以及 <a href="https://www.navicat.com.cn/products/navicat-for-oracle">Navicat for Oracle</a> 或者 <a href="https://www.navicat.com.cn/products/navicat-premium">多合一的Navicat-Premium</a><br>之前Navicat是免费的现在好像收费了，经济允许就支持一下。<a href="https://blog.csdn.net/qq_36410795/article/details/85337174">这里提供一个大佬的破解教程</a></p>
+<h4 id="篇幅-限制ORACLE就不说了而且也不建议在自己个人电脑上装ORACLE，平时Mysql够用，真的到用ORACLE的时候必定有专门的服务器（自己学习除外，你可以在虚拟机里玩）"><a href="#篇幅-限制ORACLE就不说了而且也不建议在自己个人电脑上装ORACLE，平时Mysql够用，真的到用ORACLE的时候必定有专门的服务器（自己学习除外，你可以在虚拟机里玩）" class="headerlink" title="篇幅 限制ORACLE就不说了而且也不建议在自己个人电脑上装ORACLE，平时Mysql够用，真的到用ORACLE的时候必定有专门的服务器（自己学习除外，你可以在虚拟机里玩）"></a>篇幅 限制ORACLE就不说了而且也不建议在自己个人电脑上装ORACLE，平时Mysql够用，真的到用ORACLE的时候必定有专门的服务器（自己学习除外，你可以在虚拟机里玩）</h4>
       
     </div>
     
